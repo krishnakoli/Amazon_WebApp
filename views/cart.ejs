@@ -1,0 +1,408 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Amazon</title>
+<style>
+.heading{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.amazon_img{
+    margin-top: 10px;
+    margin-left: 100px;
+    padding-left: 150px;
+}
+.amazon-logo{
+    width: 100px;
+    height: 35px;
+}
+
+.cart_item{
+    margin-left: 300px;
+}
+
+.review{
+    font-weight: 700;
+    font-family:Roboto,Arial;
+    margin-left: 250px;
+    margin-top: 40px;
+    font-size: 24px;
+    padding-top: 50px;
+}
+
+.main{
+    padding: 20px 50px 20px 50px;
+    margin: 0px 180px 20px 200px;
+}
+.Checkout{
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    column-gap: 12px;
+    align-items: start;
+}
+
+.product_{
+    display: block;
+}
+.product{
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 2px 4px 2px 4px;
+}
+
+.date{
+    font-family: Roboto,Arial;
+    font-weight: 650;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    color:rgb(0, 118, 0);
+}
+
+.whole_product{
+    font-family: Arial,sans-serif;
+    font-weight: 550;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
+img{
+    width:  150px;
+    height: 150px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content:space-evenly;
+}
+
+
+.product_name{
+    margin-bottom: 3px;
+    margin-left: 3px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.price{
+    margin-left: 3px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color:rgb(177, 39, 4);
+}
+
+.text-muted{
+    font-weight: 500;
+    font-size: 18px;
+    
+}
+
+.delivery_option{
+    margin: 0px 0px 3px 10px;
+    padding-left: 4px;
+}
+
+.radio{
+    margin-top: 10px;
+    padding-top: 8px;
+}
+
+.option{
+    padding-right: 10px;
+}
+
+.shipping{
+    padding: 10px 18px 18px 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2px;
+    font-weight: 500;
+}
+
+
+.delivery_1{
+    display: flex;
+}
+
+.delivery_2{
+    display: flex;
+}
+
+.delivery_3{
+    display: flex;
+}
+
+.shipping_details{
+    display: flex;
+    flex-direction: column;
+}
+.shipping_date{
+    color:rgb(0, 118, 0);
+    font-weight: 550;    
+    margin-left: 10px; 
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+.shipping_charge{
+    color: #6c757d;  
+}
+
+a{
+    text-decoration: none;
+    color:rgb(1, 124, 182);
+    cursor: pointer;
+}
+
+.ordersummary{
+    padding: 18px;
+    font-family: Roboto,Arial;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 4px;
+}
+
+.order{
+    margin: 10px 10px 10px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.items{
+    margin: 5px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.item_price{
+ text-align: end;   
+}
+
+.shipping_details{
+    padding-left: 3px;
+}
+
+.shipping_charge{
+    margin: 0px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.shipping_price{
+    border-bottom:1px solid rgb(222, 222, 222);;
+    text-align: end;   
+}
+
+.btax{
+    margin: 10px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Total_w_t{
+    text-align: end;   
+}
+
+.etax{
+    margin: 5px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid rgb(222, 222, 222);
+    padding-bottom: 6px;
+    
+}
+.e_price{
+    text-align: end;   
+}
+
+.Total{
+    margin: 3px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: rgb(177, 39, 4);
+    font-size: 18px;
+}
+.total_price{
+    text-align: end;   
+}
+
+.place_order{
+    margin: 0px 0px 0px 100px;
+    background-color: rgb(247, 202, 0);
+    border: 1px solid rgb(242, 194, 0);
+    width: 200px;
+    height: 45px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+input[type=radio] {
+    border: 0px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+</style>
+<% if(success && success.length){ %>  
+    <div class="alert alert-primary alert-dismissible fade show mt-3" role="alert">
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+<% } %>
+
+<% if(error && error.length){ %>  
+    <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+<% } %>
+
+
+
+<body>
+    <div class="heading">
+        <div class="amazon_img">
+            <img class="amazon-logo" src="/images/header/amazon-logo.png">
+        </div>
+        <div class="cart_item">
+           <h3 class="cart_items">Checkout (<%=  items.length%> items)</h3> 
+        </div>
+    </div>
+    <div class="review">
+        Review your order
+    </div>
+    <div class="main">
+    <div class="Checkout">
+
+    <div class="product_ ">
+        <% for( let i = 0; i < items.length; i++ ) { %>
+            <div class="product">
+            <div class="date">
+                <% const d = new Date() %>
+                <% let month = months[d.getMonth()] %>
+                <% let day=d.getDate() %>
+                <% let year=d.getYear() %>
+                <% let week=weekday[d.getDay()] %>
+                <%= `${week}, ${month} ${day}` %>
+            </div>
+        <div class="whole_product">
+            <div class="img">
+                <img src="<%= items[i].image %>" alt="">
+            </div>
+            <div class="details">
+                <div class="product_name"><b><%= items[i].name %></b></div>
+                <div class="price"><%= `$ ${((items[i].priceCents)/100)}` %></div>
+                <div class="text-muted">Quantity: <%=quantity[i]%>
+                    <a href="orders/<%= items[i].id%>/delete">Delete</a>
+                </form>
+                </div>
+            </div>
+            <div class="option">
+                <div class="delivery_option">
+            Choose Delivery option: 
+         </div>
+            <div class="shipping">
+                <div class="delivery_1">
+            <div class="radio">
+                <input type="radio" name="first" id="1" >
+            </div>
+            <div class="shipping_details">
+            <div class="shipping_date">
+                <%= `${week}, ${month} ${day}` %>
+            </div>
+            <div class="shipping_charge">
+                $9.99-Fast Service
+        </div>
+    </div>
+    </div>
+    <div class="delivery_2">
+        <div class="radio">
+            <input type="radio" name="first" id="2">
+            <script>
+                radiobtn = document.getElementById("2");
+            radiobtn.checked = true;
+            </script>
+        </div>
+        <div class="shipping_details">
+        <div class="shipping_date">
+            <% let days=(d.getDate()+1)%31 %>
+            <% let weeks=weekday[(d.getDay()+1)%7] %>
+            <%= `${weeks}, ${month} ${days}` %>
+        </div>
+        <div class="shipping_charge">
+            $4.99 - Shipping
+    </div>
+</div>
+</div>
+<div class="delivery_3">
+    <div class="radio">
+        <input type="radio" name="first" id="3">
+    </div>
+    <div class="shipping_details">
+    <div class="shipping_date">
+        <% let dayss=(d.getDate()+2)%31 %>
+        <% let weekss=weekday[(d.getDay()+2)%7] %>
+        <%= `${weekss}, ${month} ${dayss}` %>
+    </div>
+    <div class="shipping_charge">
+        Free Delivery
+</div>
+</div>
+</div>
+        </div>
+        </div>
+            </div>
+            </div>
+            <% } %>
+        </div>
+
+        <div class="ordersummary">
+            <div class="Order">
+                Order Summary:
+            </div>
+            <div class="items">
+                Items (<%= items.length %>):
+                <div class="item_price"> 
+                    <% for(let i=0;i<items.length;i++) {%>
+                      <% total_price+=(quantity[i]*items[i].priceCents) %>  
+                        <% } %>
+                        $<%=`${((total_price)/100).toPrecision(4)}` %>
+                </div>
+            </div>
+            <div class="Shipping_charge">
+                Shipping & handling: 
+                <div class="shipping_price"><%var tax=4.99 %>
+                $<%= tax %>
+                </div>
+            </div>
+            <div class="btax">
+                Total before tax:
+                <div class="Total_w_t">$<%= ((total_price/100)+tax).toPrecision(4)%></div>
+            </div>
+            <div class="etax">
+                Estimated tax(10%):
+                <div class="e_price">$<%= ((((total_price/100)+tax)*10)/100).toPrecision(3) %></div>
+            </div>
+            <div class="Total">
+                Order total:
+                <div class="total_price">$ <%= (((((total_price/100)+tax)*10)/100)+((total_price/100)+tax)).toPrecision(4)%></div>
+            </div>
+            <div class="placeorder">
+                <form action="/orders/purchase" method="post">
+                <button class="place_order">Place your order</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+

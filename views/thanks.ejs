@@ -1,0 +1,143 @@
+<title>Amazon</title>
+
+<style>
+body{
+    background-color: rgb(207, 214, 221);
+}    
+img{
+    width:  150px;
+    height: 150px;
+}
+
+.amazon-logo{
+    margin-top: 18px;
+    padding-left: 10px;
+    width: 90px;
+    height: 30px;
+}
+.amazon_img{
+    border-bottom: 1px solid rgb(232, 232, 232);
+
+    padding-bottom: 15px;
+}
+.container{
+    width: 50%;
+    height: 400px;
+    background-color:white;
+    margin-top: 60px;
+    margin-left: 18%;
+    padding: 0px 20px 30px 30px ;
+    border-radius: 12px;
+
+}
+.heading{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.confirmed{
+    margin: 10px 0px 10px 0px;
+    color: rgb(255, 208, 0);
+    font-weight: 600;
+    font-size: 22px;
+}
+.message{
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    padding-bottom: 15px;
+
+}
+.shipping{
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+}
+.date{
+    font-weight: 550;
+    font-size: 19px;
+color:rgb(0, 118, 0);
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+.link{
+    display: flex;
+    margin: 10px 0px 10px 0px;
+    padding: 20px;
+}
+.review{
+    width: 250px;
+    height: 40px;
+    background-color: rgb(247, 202, 0);
+    border: 1px solid rgb(242, 194, 0);
+    border-radius: 8px;
+    margin-left: 50px;
+    padding: 12px 0px 0px 60px;
+}
+
+.continue{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(247, 202, 0);
+    border: 1px solid rgb(242, 194, 0);
+    border-radius: 8px;
+    margin-left: 50px;
+    padding: 12px 0px 0px 60px;
+}
+
+
+</style>
+
+
+
+<% const d = new Date() %>
+                <% let month = months[d.getMonth()] %>
+                <% let day=d.getDate() %>
+                <% let year=d.getYear() %>
+                <% let dayss=(d.getDate()+2)%31 %>
+        <% let weekss=weekday[(d.getDay()+2)%7] %>
+<div class="container">
+<div class="amazon_img">
+    <img class="amazon-logo" src="/images/header/amazon-logo.png">
+</div>
+<div class="details">
+<div class="heading">
+    hey <%= User.username %>,
+</div>
+<div class="confirmed">
+    <span>&#10003;</span> Your Order is confirmed!.
+</div>
+
+<div class="message">
+Thanks you for shopping. please check your email for order confirmation and detailed delivery information.
+</div>
+
+<div class="address">
+    Shipping to your Address:
+</div>
+
+<div class="shipping">
+    Estimated Delivery:
+    <span class="date"><%= `${weekss}, ${month} ${dayss}` %></span>
+</div>
+
+<div class="link">
+
+<div class="review">
+    <a href="/orders">Review or edit your order</a>
+</div>
+<div class="continue">
+    <a href="/home">Continue Shopping</a>
+</div>
+
+</div>
+</div>
+</div>

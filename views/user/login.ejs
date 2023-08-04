@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<style>
+    h1{
+        margin-top: 10px;
+    text-align: center;
+}
+body{
+    background-color: #b5D0E0;
+}
+
+.container{
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    /* background-color: transparent; */
+    background-color: white;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.card{
+    border-radius: 8px;
+    margin-left: 36%;
+    margin-top: 20px;
+    padding: 0px 4px 0px 4px;
+}
+.heading{
+    margin-left: 8px;
+}
+form{
+    color: blue;
+    font-weight: 700;
+    margin: 0 5px 0px 5px;
+}
+#username{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#email{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#password{margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#submit{
+    cursor: pointer;
+    margin-bottom: 3%;
+    margin-left: 30%;
+    padding:  8px 50px 8px 50px;
+}
+.form-label{
+    font-size: 18px;
+    color: black;
+}
+
+</style>
+<body>
+    <div class="limiter">
+    <div class="container">
+        <div class="heading">
+             <h1>Member login</h1>
+</div>
+
+<div class="card" style="width: 24rem;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyG2PFK3yKP7YLEtriEcbAaavOlUqZPL7h8Q&usqp=CAU" class="card-img-top" alt="...">
+<form action="/login" method="post" novalidate class="Validate_form">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" id="username" required placeholder="Username">
+    <div class="valid-feedback">
+        Looks good
+    </div>
+    <div class="invalid-feedback">
+        Please Enter the Username
+    </div>
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" id="password" required placeholder="Password">
+    <div class="valid-feedback">
+        Looks good
+    </div>
+    <div class="invalid-feedback">
+        Please Enter the password
+    </div>
+    <button class="btn btn-primary mt-3 " id="submit"> Submit
+    </button>
+</form>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

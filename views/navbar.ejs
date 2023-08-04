@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a href="amazon.html" class="header-link">
+      <img class="amazon-logo" src="./images/header/amazon-logo-white.png">
+    </a>
+    <div class="amazon-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+      <button class="search-button">
+        <img class="search-icon" src="./images/header/search-icon.png">
+      </button>
+    </div>
+
+
+    <div class="amazon-header-right-section">
+      <a class="orders-link header-link" href="orders.html">
+        <span class="returns-text">Returns</span>
+        <span class="orders-text">& Orders</span>
+      </a>
+
+      <a class="cart-link header-link" href="/orders">
+        <img class="cart-icon" src="images/header/cart-icon.png">
+        <div class="cart-quantity">
+          <% if (count) { %>
+            <%= count %>
+          <% } %>
+        </div>
+        <div class="cart-text">Cart</div>
+      </a>
+    </div>
+  </div>
+</nav>

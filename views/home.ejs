@@ -1,0 +1,94 @@
+<%layout('./layout/boilerplate')%>
+
+<style>
+    .review{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container{
+      margin-bottom: 15px;
+    }
+</style>
+<div class="container">
+    <% for(let i=0;i<40;i++) { %>
+<div class="card" style="width: 18rem">
+    <div class="product_img">
+    <img src="<%= items[i].image %>" class="card-img-top" id="img_" alt="...">
+</div>
+    <div class="card-body"> 
+        <div class="title">
+        <h6 ><%= items[i].name  %></h6>
+    </div>
+        <div class="review">
+            <div class="rating_img">
+      <% if(items[i].rating.stars==0) {%>
+            <img class="star"  src="images\ratings\rating-0.png" alt="">
+            <% } %>
+
+            <% if(items[i].rating.stars==0.5) {%>
+         <img class="star"  src="images\ratings\rating-05.png" alt="">
+            <% } %>
+
+      <% if(items[i].rating.stars==1) {%>
+            <img class="star"  src="images\ratings\rating-10.png" alt="">
+            <% } %>
+
+      <% if(items[i].rating.stars==1.5) {%>
+        <img class="star"  src="images\ratings\rating-15.png" alt="">
+            <% } %>
+
+      <% if(items[i].rating.stars==2) {%>
+        <img class="star"  src="images\ratings\rating-20.png" alt="">
+            <% } %>
+
+      <% if(items[i].rating.stars==2.5) {%>
+        <img class="star"  src="images\ratings\rating-25.png" alt="">
+            <% } %>
+
+      <% if(items[i].rating.stars==3) {%>
+        <img  class="star"  src="images\ratings\rating-30.png" alt="">
+            <% } %>
+
+      <% if(items[i].rating.stars==3.5) {%>
+        <img class="star"  src="images\ratings\rating-35.png" alt="">
+            <% } %>
+      <% if(items[i].rating.stars==4) {%>
+        <img class="star"  src="images\ratings\rating-40.png" alt="">
+        <% } %>
+      <% if(items[i].rating.stars==4.5) {%>
+        <img class="star" src="images\ratings\rating-45.png" alt="">
+        <% } %>
+      <% if(items[i].rating.stars==5) {%>
+        <img class="star"  src="images\ratings\rating-50.png" alt="">
+        <% } %>
+    </div>
+      <div class="card-text"><b><%= items[i].rating.count %></b>
+    </div>
+    </div>
+
+    <div class="product_price">
+        <b>$<%= (items[i].priceCents)/100 %></b>
+    </div>
+    <form action="/orders/<%=items[i]._id%> " method="post">
+    <div class="prodct_quantity">
+        <select class ="btn btn-light" name="quantity" id="quantity">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+      </div>
+        <div class="addtocart">
+          <button class="btn btn-warning" id="cart">Add to cart</button>
+    </div>
+    </form>
+    </div>
+  </div>
+  <% } %>    
+</div>
